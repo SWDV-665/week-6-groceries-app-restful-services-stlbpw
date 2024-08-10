@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{_title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{_title}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-text class="ion-text-center" color="secondary" ion-padding *ngIf="_groceryList.length === 0">
+    <h3>
+      Grocery List is Empty... Add Some!
+    </h3>
+  </ion-text>
+
+  <ion-list class="padded-list">
+    <ion-item-sliding *ngFor="let grocery of _groceryList; let i = index" #slider>
+      <ion-item>
+        <ion-label>{{grocery.getName()}}</ion-label>
+        <p>Quantity: {{grocery.getQuantity()}}</p>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="secondary" (click)="editWithModal(grocery, i, slider)">
+          <ion-icon color="light" slot="icon-only" name="pencil"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="tertiary" (click)="shareItem(grocery, i, slider)">
+          <ion-icon color="light" slot="icon-only" name="share"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="deleteItem(grocery, i, slider)">
+          <ion-icon color="light" slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="addWithModal()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

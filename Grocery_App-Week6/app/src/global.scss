@@ -1,0 +1,146 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+
+:root {
+
+ /**
+     * Setting the variables for DEMO purposes only.
+     * Values will be set automatically when building an iOS or Android app.
+     */
+  --ion-safe-area-top: 20px;
+  --ion-safe-area-bottom: 20px;
+
+  /*
+  Generated at https://ionicframework.com/docs/theming/color-generator
+  */
+
+  --ion-color-primary: #E0DD80;
+  --ion-color-primary-rgb: 224, 221, 128;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #c5c271;
+  --ion-color-primary-tint: #e3e08d;
+
+  --ion-color-secondary: #C680E0;
+  --ion-color-secondary-rgb: 198, 128, 224;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #ae71c5;
+  --ion-color-secondary-tint: #cc8de3;
+
+  --ion-color-tertiary: #8780E0;
+  --ion-color-tertiary-rgb: 135, 128, 224;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #7771c5;
+  --ion-color-tertiary-tint: #938de3;
+
+  --ion-color-success: #2dd55b;
+  --ion-color-success-rgb: 45, 213, 91;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #28bb50;
+  --ion-color-success-tint: #42d96b;
+
+  --ion-color-warning: #ffc409;
+  --ion-color-warning-rgb: 255, 196, 9;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e0ac08;
+  --ion-color-warning-tint: #ffca22;
+
+  --ion-color-danger: #c5000f;
+  --ion-color-danger-rgb: 197, 0, 15;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ad000d;
+  --ion-color-danger-tint: #cb1a27;
+
+  --ion-color-light: #f6f8fc;
+  --ion-color-light-rgb: 246, 248, 252;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d8dade;
+  --ion-color-light-tint: #f7f9fc;
+
+  --ion-color-medium: #5f5f5f;
+  --ion-color-medium-rgb: 95, 95, 95;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #545454;
+  --ion-color-medium-tint: #6f6f6f;
+
+  --ion-color-dark: #2f2f2f;
+  --ion-color-dark-rgb: 47, 47, 47;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #292929;
+  --ion-color-dark-tint: #444444;
+
+  ion-modal {
+    --height: 60%;
+    --width: 90%;
+    --border-radius: 16px;
+    --box-shadow: 10px 10px 15px -3px #8780E0, -10px -10px 15px -4px #C680E0;
+  }
+  
+  ion-modal::part(backdrop) {
+    background: #f6f8fc;
+    opacity: 1;
+  }
+  
+  ion-modal ion-toolbar {
+    --background: #2f2f2f;
+    --color: white;
+  }
+
+// style the alert popup
+  ion-alert {
+    //background color of the alert
+    --background: var(--ion-color-medium);
+    //color header of the alert
+    --color-header: var(--ion-color-primary);
+    //color of the alert message
+    --color-message: var(--ion-color-primary);
+    //color of the alert button text
+    --color-button-text: var(--ion-color-primary);
+
+  }
+  
+}

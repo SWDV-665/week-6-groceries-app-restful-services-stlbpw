@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="tertiary" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{_message}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="success" (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-input labelPlacement="stacked" label="Grocery Item" [(ngModel)]="_name" placeholder="Grocery Item" value="{{_name}}"></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-select labelPlacement="stacked" interface="popover" [(ngModel)]="_quantity" label="Quantity" placeholder="Select Quantity" 
+      value="{{_quantity}}" selectedText="{{_quantity}}">
+      <ion-select-option *ngFor="let i of _quantities" value="{{i}}">{{i}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>

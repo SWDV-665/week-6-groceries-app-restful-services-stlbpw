@@ -1,0 +1,18 @@
+{
+	"groceryname": "Apples",
+	"groceryquantity": 2
+}
+
+{
+	"groceryname": "Oranges",
+	"groceryquantity": 4
+}
+
+
+UPDATE
+{
+        "_id": "66af9594e1d6187196b11c1b",
+        "updates": {
+             "groceryquantity": 15
+        }
+}
